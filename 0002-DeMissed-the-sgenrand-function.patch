@@ -1,0 +1,20 @@
+
+---
+ proc.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/proc.c b/proc.c
+index 8d5dfd2..efd1d49 100644
+--- a/proc.c
++++ b/proc.c
+@@ -25,6 +25,7 @@ void
+ pinit(void)
+ {
+   initlock(&ptable.lock, "ptable");
++  sgenrand(unixtime());
+ }
+ 
+ //PAGEBREAK: 32
+-- 
+1.9.1
+
